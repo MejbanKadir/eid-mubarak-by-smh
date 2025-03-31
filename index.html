@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak Wisher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="moon-stars">
+                    <div class="moon"></div>
+                    <div class="stars"></div>
+                </div>
+                <h1>Eid Mubarak Wisher</h1>
+                <p class="subtitle">Create a beautiful Eid greeting for your loved ones by SMH TECH</p>
+            </div>
+            
+            <div class="form-container">
+                <form id="greetingForm">
+                    <div class="form-group">
+                        <label for="senderName">Your Name</label>
+                        <input type="text" id="senderName" name="senderName" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Who is this greeting for?</label>
+                        <div class="recipient-options">
+                            <div class="option">
+                                <input type="radio" id="specificPerson" name="recipientType" value="specific" checked>
+                                <label for="specificPerson">Specific Person</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="everyone" name="recipientType" value="everyone">
+                                <label for="everyone">Everyone</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="recipientNameGroup">
+                        <label for="recipientName">Recipient's Name</label>
+                        <input type="text" id="recipientName" name="recipientName" placeholder="Enter recipient's name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="verseSelection">Include an Islamic Verse (Optional)</label>
+                        <select id="verseSelection" name="verseSelection">
+                            <option value="none">None</option>
+                            <option value="verse1">"May the blessings of Allah fill your life with happiness and open all the doors of success now and always."</option>
+                            <option value="verse2">"Eid is a time to celebrate the unity, strength and generosity of our community."</option>
+                            <option value="verse3">"May Allah accept your good deeds, forgive your transgressions and ease the suffering of all people around the globe."</option>
+                            <option value="verse4">"On this Eid, may Allah bless you with all the goodness and prosperity you deserve."</option>
+                            <option value="verse5">"May the divine blessings of Allah bring you hope, faith, and joy on Eid and forever."</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-generate">Generate Greeting <i class="fas fa-magic"></i></button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="result-container hidden" id="resultContainer">
+                <h3>Your Personalized Greeting Link</h3>
+                <div class="link-container">
+                    <input type="text" id="greetingLink" readonly>
+                    <button id="copyLink" class="btn-copy"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="share-options">
+                    <p>Share via:</p>
+                    <div class="social-buttons">
+                        <a href="#" id="shareWhatsapp" class="btn-social whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" id="shareFacebook" class="btn-social facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" id="shareTwitter" class="btn-social twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <button id="createNew" class="btn-new">Create New Greeting</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Made with <i class="fas fa-heart"></i> for Eid by mejbankadir</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
